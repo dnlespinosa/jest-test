@@ -1,0 +1,46 @@
+Goals 
+    -write unit tests using jest 
+
+An introduction to Jest 
+    -jest is an open source testing platform written by facebook 
+    -built on top of jasmine
+    -easy to test environments that are not browser based 
+    -jestjs.io/en/
+    -output comes to terminal 
+
+Installing jest 
+    npm i--global jest
+
+Organizing tests   
+    test files should be named NAME_OF_FILE.test.js
+        you can place in the same directory as the JS file 
+        or you can organize them in a test folder __tests__
+    if you have package.json, you don't need additional configuration
+        if not, create jest.config.js file, it can be empty but you still need one 
+
+DESCRIBE
+    to group together related tests, wrap these in describe callback 
+
+Expectations 
+    expectations should go inside of test function callbacks 
+        a function can have several expectations - but be thoughtful about keeping tests small and simple 
+    expect should not be hanging around by itself, it should be in a test function 
+
+jestjs.io/docs/en/using-matchers
+
+most common matchers 
+    .toEqual
+        has the same value
+    .toBe
+        is the same object
+    .toContain
+        does object/array contain this item
+    .not.
+        add before matcher to invert
+            expect('hi').not.toEqual('bye')
+ 
+ANY
+    Sometimes oyure not sure whatpart of an object will be 
+    use expect.any(type) and it will match any of that type
+
+BEFORE / AFTER 
